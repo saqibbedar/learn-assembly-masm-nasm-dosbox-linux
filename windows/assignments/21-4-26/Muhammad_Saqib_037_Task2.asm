@@ -1,5 +1,15 @@
 ; Task 2: Triangle Pattern
 ; Q: Write a program to print the triangle upwards and downwards. use nested loops.
+;   
+; *
+; * *
+; * * *
+; * * * *
+; * * * * *
+; * * * *
+; * * *
+; * *
+; *
 ;
 ; Name: Muhammad Saqib
 ; Reg. No: 04072313037
@@ -21,35 +31,21 @@ main proc
 
 upper:
     ; Print the upper half row by row.
-    mov al,n
-    sub al,cl
-    mov bl,al
-
-space1:
-    ; Print leading spaces so the triangle stays centered.
-    cmp bl,0
-    je star1
-    mov dl,' '
-    mov ah,02h
-    int 21h
-    dec bl
-    jmp space1
-
-star1:
-    ; Print the stars for the current upper row.
-    mov al,cl
-    add al,cl
-    dec al
-    mov bl,al
+    mov bl,cl
 
 print1:
-    ; Keep printing stars until the row is complete.
+    ; Keep printing stars with spaces between them until the row is complete.
     cmp bl,0
     je next1
     mov dl,'*'
     mov ah,02h
     int 21h
     dec bl
+    cmp bl,0
+    je print1
+    mov dl,' '
+    mov ah,02h
+    int 21h
     jmp print1
 
 next1:
@@ -68,35 +64,21 @@ next1:
 
 lower:
     ; Print the lower half row by row.
-    mov al,n
-    sub al,cl
-    mov bl,al
-
-space2:
-    ; Print leading spaces for the lower half.
-    cmp bl,0
-    je star2
-    mov dl,' '
-    mov ah,02h
-    int 21h
-    dec bl
-    jmp space2
-
-star2:
-    ; Print the stars for the current lower row.
-    mov al,cl
-    add al,cl
-    dec al
-    mov bl,al
+    mov bl,cl
 
 print2:
-    ; Keep printing stars until the lower row is complete.
+    ; Keep printing stars with spaces between them until the lower row is complete.
     cmp bl,0
     je next2
     mov dl,'*'
     mov ah,02h
     int 21h
     dec bl
+    cmp bl,0
+    je print2
+    mov dl,' '
+    mov ah,02h
+    int 21h
     jmp print2
 
 next2:
