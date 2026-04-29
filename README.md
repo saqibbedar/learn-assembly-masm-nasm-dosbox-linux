@@ -7,7 +7,7 @@ This repository contains **assembly language examples and learning material** fo
 
 It includes:
 - beginner-friendly programs to advanced programs
-- an organized Windows/DOS learning track (basics → variables → loops → procedures → stack → macros)
+- an organized Windows/DOS learning track (basics → variables → loops → arrays → procedures → stack → macros)
 - a practical **environment setup** for running 8086 assembly using DOSBox
 
 ---
@@ -32,9 +32,11 @@ asm/
         │   ├── variables/
         │   ├── conditionals/
         │   ├── loops/
+        |   ├── arrays/
         │   ├── macro/
         │   ├── procedures/
         │   └── stack/
+        ├── past_papers/
         ├── practice/
         ├── questions/
         └── src.yml
@@ -118,8 +120,7 @@ main
 - `linux/programs/src/hello_world/firstProgram.asm`
 
 ### Windows / DOS 8086
-- `windows/00_hello_world.asm`
-- `windows/src/main/` (organized topic-wise learning material)
+- `windows/src/` (organized topic-wise learning material)
 
 ---
 
