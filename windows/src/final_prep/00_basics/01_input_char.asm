@@ -1,0 +1,22 @@
+.model small
+.stack 100h
+
+.data
+
+.code
+main proc
+    ;  input character
+    mov ah, 01h
+    int 21h
+
+    ; load input value into dl first and then print it.
+    mov dl, al
+    mov ah, 02h
+    int 21h
+
+    ; terminate program
+    mov ah, 4ch
+    int 21h
+
+main endp
+end main
